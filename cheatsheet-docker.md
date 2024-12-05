@@ -60,7 +60,8 @@
   - `--driver <driver>`: Fügt dem Netzwerk einen Treiber hinzu.
 
 - `docker network inspect`: Details zu einem Netzwerk anzeigen.
-- `docker network rm`: Netzwerk löschen
+- `docker network rm`: Netzwerk löschen.
+- `docker network prune`: Löscht ungenutzte Netzwerke.
 - `docker network connect <network> <container>`: Fügt dem Container ein Netzwerk hinzu.
 - `docker network disconnect <network> <container>`: Entfernt einen Container einem Netzwerk.
 
