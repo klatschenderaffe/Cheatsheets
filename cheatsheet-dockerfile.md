@@ -71,3 +71,15 @@ Es gibt verschiedene Möglichkeiten, die Arbeit mit einer Dockerfile zu vereinfa
   ```
 
   In diesem Fall wird der Port der Anwendung auf `4000` gesetzt, obwohl in der Dockerfile ursprünglich `1234` definiert war.
+
+- **Code-Anpassung für Umgebungsvariablen**: Damit die Umgebungsvariable auch im Code verwendet werden kann, musst du sicherstellen, dass an der entsprechenden Stelle auf die Variable zugegriffen wird. In JavaScript oder Node.js kannst du beispielsweise den Port wie folgt abrufen:
+
+  ```javascript
+  const port = process.env.PORT || 3000;
+
+  app.listen(port, () => {
+    console.log(`Server läuft auf Port ${port}`);
+  });
+  ```
+
+  Hier wird `process.env.PORT` genutzt, um den Wert der Umgebungsvariablen abzurufen. Falls keine Umgebungsvariable gesetzt ist, wird ein Standardwert (in diesem Fall `3000`) verwendet.
