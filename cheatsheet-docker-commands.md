@@ -31,7 +31,7 @@
   - `sh -c "command"`: Öffne innerhalb des Containers eine Shell und führe folgenden Command aus. (-c = Command)
   - `-it`: Startet den Container im Interaktiven Modus.
   - `--restart <policy>`: Setzt eine Restart Policy.
-  - `--link <container_name>`: 2 Container verbinden.
+  - `--link <container_name>`: Um zwei Container im default Netzwerk miteinander zu verbinden.
 
 - `docker ps`: Listet alle laufenden Container auf.
 - `docker ps -a`: Listet alle Container auf, einschließlich gestoppter.
