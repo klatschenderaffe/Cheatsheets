@@ -32,6 +32,7 @@
   - `-it`: Startet den Container im Interaktiven Modus.
   - `--restart <policy>`: Setzt eine Restart Policy.
   - `--link <container_name>`: Um zwei Container im default Netzwerk miteinander zu verbinden.
+  - `--env-file <path_to_file>`: Eine Datei für Umgebungsvariablen anfügen.
 
 - `docker ps`: Listet alle laufenden Container auf.
 - `docker ps -a`: Listet alle Container auf, einschließlich gestoppter.

@@ -112,4 +112,4 @@ Es gibt verschiedene Möglichkeiten, die Arbeit mit einer Dockerfile zu vereinfa
   --env-file /path/to/.env
   ```
 
-Mit dieser Methode kannst du deine Umgebung sauber organisieren und deine Befehle deutlich vereinfachen!
+  Mit dieser Methode kannst du deine Umgebung sauber organisieren und deine Befehle deutlich vereinfachen!
