@@ -18,7 +18,7 @@
 
 ## Container-Verwaltung
 
-- `docker run <image>`: Erstellt und startet einen neuen Container aus einem Image
+- `docker run <OPTIONEN> <image>`: Erstellt und startet einen neuen Container aus einem Image
 
   #### Optionen:
 
@@ -31,6 +31,7 @@
   - `sh -c "command"`: Öffne innerhalb des Containers eine Shell und führe folgenden Command aus. (-c = Command)
   - `-it`: Startet den Container im Interaktiven Modus.
   - `--restart <policy>`: Setzt eine Restart Policy.
+  - `--link <container_name>`: 2 Container verbinden.
 
 - `docker ps`: Listet alle laufenden Container auf.
 - `docker ps -a`: Listet alle Container auf, einschließlich gestoppter.
@@ -51,7 +52,7 @@
 ## Netzwerk
 
 - `docker network ls`: Listet alle Docker-Netzwerke auf.
-- `docker network create <network_name>`: Erstellt ein neues Netzwerk.
+- `docker network create <OPTIONEN> <network_name>`: Erstellt ein neues Netzwerk.
 
   ### Optionen:
 
@@ -60,7 +61,8 @@
   - `--driver <driver>`: Fügt dem Netzwerk einen Treiber hinzu.
 
 - `docker network inspect`: Details zu einem Netzwerk anzeigen.
-- `docker network rm`: Netzwerk löschen
+- `docker network rm`: Netzwerk löschen.
+- `docker network prune`: Löscht ungenutzte Netzwerke.
 - `docker network connect <network> <container>`: Fügt dem Container ein Netzwerk hinzu.
 - `docker network disconnect <network> <container>`: Entfernt einen Container einem Netzwerk.
 
