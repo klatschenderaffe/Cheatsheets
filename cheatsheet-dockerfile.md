@@ -49,3 +49,25 @@ CMD ["node", "app.js"]
 ```
 
 Mit dieser Dockerfile erstellst du ein schlankes und effizientes Image für eine Node.js-Anwendung!
+
+## **Erweiterungsmöglichkeiten**
+
+Es gibt verschiedene Möglichkeiten, die Arbeit mit einer Dockerfile zu vereinfachen und Fehler, wie beispielsweise Tippfehler, zu vermeiden.
+
+- **`ENV <key=value>`**: Wenn du mit Umgebungsvariablen arbeitest, kannst du diese direkt in der Dockerfile definieren und abrufen. Das erleichtert die Konfiguration und macht deine Dockerfile flexibler. Ein Beispiel für die Verwendung von Umgebungsvariablen, etwa für die Festlegung eines Ports, sieht so aus:
+
+  ```dockerfile
+  ...
+  ENV PORT=1234
+
+  EXPOSE $PORT
+  ...
+  ```
+
+  Wenn du jedoch beim Starten des Containers eine andere Portnummer übergibst, wird die in der Dockerfile definierte Variable überschrieben. Dies geschieht durch den Einsatz des `--env` Flags im `docker run` Befehl. Ein Beispiel:
+
+  ```bash
+  docker run -d --env PORT=4000 -p 3000:4000 <imagename>
+  ```
+
+  In diesem Fall wird der Port der Anwendung auf `4000` gesetzt, obwohl in der Dockerfile ursprünglich `1234` definiert war.
