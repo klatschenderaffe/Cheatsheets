@@ -18,7 +18,7 @@
 
 ## Container-Verwaltung
 
-- `docker run <image>`: Erstellt und startet einen neuen Container aus einem Image
+- `docker run <OPTIONEN> <image>`: Erstellt und startet einen neuen Container aus einem Image
 
   #### Optionen:
 
@@ -52,7 +52,7 @@
 ## Netzwerk
 
 - `docker network ls`: Listet alle Docker-Netzwerke auf.
-- `docker network create <network_name>`: Erstellt ein neues Netzwerk.
+- `docker network create <OPTIONEN> <network_name>`: Erstellt ein neues Netzwerk.
 
   ### Optionen:
 
