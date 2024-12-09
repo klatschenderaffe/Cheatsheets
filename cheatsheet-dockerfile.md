@@ -22,7 +22,7 @@ Hier sind die wichtigsten Anweisungen einer Dockerfile und ihre Bedeutung:
   Führt einen Befehl während des Build-Prozesses aus. Zum Beispiel kannst du mit `RUN npm install` die Abhängigkeiten aus der `package.json` installieren.
 
 - **`COPY . .`**  
-  Kopiert den Rest deiner Dateien in das Arbeitsverzeichnis. Es werden nur Dateien kopiert, die noch nicht vorhanden sind. Solltest du eine `.dockerignore` File verwenden, könntest du die erste `COPY` Anweisung weglassen.
+  Kopiert den Rest deiner Dateien in das Arbeitsverzeichnis. Dabei werden allerdings die vorhandenen Dateien im Arbeitsverzeichnis überschrieben.Daher solltest du eine `.dockerignore` File verwenden um dies zu verhindern. Mit der `.dockerignore` können wir das erste Kopie weglassen.
 
 - **`EXPOSE <Port>`**  
   Gibt den Port an, den deine Anwendung verwendet (z. B. `3000`). Dies dient zur Dokumentation und als Hinweis für Tools wie Docker Compose.
