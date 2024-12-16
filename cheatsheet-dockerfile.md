@@ -106,7 +106,7 @@ Es gibt verschiedene Möglichkeiten, die Arbeit mit einer Dockerfile zu vereinfa
   - Die Variablen können zentral verwaltet werden und sind wiederverwendbar.
   - Sensible Informationen wie Passwörter müssen nicht direkt im Terminal eingegeben werden (aber schütze die `.env`-Datei selbst).
 
-  **Hinweis**: Stelle sicher, dass sich die `.env`-Datei im richtigen Verzeichnis befindet oder gib den vollständigen Pfad an:
+  **Hinweis**: Stelle sicher, dass sich die `.env`-Datei im richtigen Verzeichnis befindet oder gib den vollständigen Pfad an. Stelle außerdem sicher das du das Packet `dotenv` in deinen Abhängigkeiten installiert hast:
 
   ```bash
   --env-file /path/to/.env
