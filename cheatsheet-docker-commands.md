@@ -87,3 +87,4 @@
 - `docker login -u <username>`: Login für Docker Hub.
 - `docker push <username>/<image_name>`: Image publischen.
 - `docker search <image_name>`: In Hub nach einem Image suchen.
+- `docker image tag <name:tag> <username/name:tag> `: Das Image taggen, bevor es gespushed wird.
